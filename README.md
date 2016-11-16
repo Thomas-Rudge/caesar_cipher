@@ -3,7 +3,7 @@ A caesar cipher that takes in an ascii string and a shift factor, shifts the str
 
 Example
 
-'''Ruby
+```Ruby
 require 'caesar'
 
 >> cipher("Thomas Rudge", 10)
@@ -24,4 +24,4 @@ require 'caesar'
 >> cipher("auv!v!n\"r!\";", -13)
 "Thisisatest."
 
-'''
+```
