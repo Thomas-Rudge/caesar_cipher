@@ -6,7 +6,7 @@ def cipher(text, shift)
   text = text.split('').map do |char|
     char = char.ord
     
-    if !character_printable?(char)
+    unless character_printable?(char)
       char = nil
       next
     end
