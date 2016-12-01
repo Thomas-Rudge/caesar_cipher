@@ -5,10 +5,8 @@ def cipher(text, shift)
 
   text = text.split('').map do |char|
     char = char.ord
-    char = character_printable?(char)
-
+    char = char.between?(32, 126) ? char : nil
     char.nil? ? next : nil
-
     char += shift
 
     if char > 126
@@ -22,10 +20,4 @@ def cipher(text, shift)
 
   return text
 
-end
-
-def character_printable?(char)
-  char = nil unless char.between?(32, 126)
-
-  char
 end
